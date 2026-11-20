@@ -8,12 +8,12 @@
     />
     <meta
       name="theme-color"
-      content="#fafaf8"
+      content="#e9e5f5"
       media="(prefers-color-scheme: light)"
     />
     <meta
       name="theme-color"
-      content="#0d0d0d"
+      content="#e9e5f5"
       media="(prefers-color-scheme: dark)"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -30,22 +30,23 @@
     />
     <link
       rel="icon"
-      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0a'/><text x='6' y='22' font-family='JetBrains Mono, ui-monospace, monospace' font-size='14' font-weight='600' fill='%23fafafa'>FE</text></svg>"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0a'/><text x='6' y='22' font-family='JetBrains Mono, ui-monospace, monospace' font-size='14' font-weight='600' fill='%23fafafa'>IT</text></svg>"
     />
     <link
       rel="apple-touch-icon"
-      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='36' fill='%230a0a0a'/><text x='30' y='120' font-family='JetBrains Mono, ui-monospace, monospace' font-size='80' font-weight='600' fill='%23fafafa'>FE</text></svg>"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='36' fill='%230a0a0a'/><text x='30' y='120' font-family='JetBrains Mono, ui-monospace, monospace' font-size='80' font-weight='600' fill='%23fafafa'>IT</text></svg>"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=5" />
+    <link rel="stylesheet" href="style.css?v=6" />
   </head>
   <body>
     <main class="stack" id="card">
+      <header class="masthead"><a class="wordmark" href="./" aria-label="Ianel home">ianel.</a><p>Web developer based in Madagascar</p></header>
       <!-- standalone QR card -->
       <section
         class="qr-card"
@@ -53,6 +54,8 @@
         id="qr-card"
         data-state="portfolio"
       >
+        <h2 class="qr-heading">Take my links with you.</h2>
+        <p class="qr-description">Choose a destination, then scan to connect.</p>
         <div
           class="qr-press"
           id="qr-press"
@@ -172,17 +175,6 @@
 
       <!-- profile card -->
       <section class="profile-card" aria-label="Profile">
-        <header class="banner">
-          <p class="banner-meta" aria-hidden="true">
-            <span class="bm-k">fig.</span>
-            <span class="bm-v">01</span>
-          </p>
-          <span class="banner-mark">IT</span>
-          <p class="banner-meta banner-meta-r" aria-hidden="true">
-            <span class="bm-k">v</span>
-            <span class="bm-v">1.0</span>
-          </p>
-        </header>
 
         <div class="profile-body">
           <figure class="avatar">
@@ -203,11 +195,7 @@
             <p class="tagline">Web developer — crafting usable products</p>
           </div>
 
-          <p class="section-label">
-            <span class="section-index">01</span>
-            <span class="section-sep" aria-hidden="true">/</span>
-            <span class="section-name">contact.md</span>
-          </p>
+          <h2 class="section-label">Find me online</h2>
 
           <ul class="contacts">
             <li class="contact-row">
@@ -326,7 +314,7 @@
                 <path d="M22 2 11 13" />
                 <path d="M22 2l-7 20-4-9-9-4 20-7z" />
               </svg>
-              <span id="share-label">Share card</span>
+              <span id="share-label" aria-live="polite">Share card</span>
             </button>
           </div>
 
@@ -343,6 +331,7 @@
         <p class="colophon-line">
           <span>© <span id="year"></span> Ianel.</span>
         </p>
+        <p>Made for a simple hello.</p>
       </footer>
     </main>
 
