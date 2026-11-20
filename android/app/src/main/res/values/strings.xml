@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ianel Card</string>
+    <string name="title_activity_main">Ianel Card</string>
+    <string name="package_name">com.ianeltombozafy.card</string>
+    <string name="custom_url_scheme">com.ianeltombozafy.card</string>
+</resources>

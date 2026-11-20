@@ -4,34 +4,49 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
+      content="width=device-width, initial-scale=1, viewport-fit=contain"
     />
-    <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="theme-color"
+      content="#e9e5f5"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#e9e5f5"
+      media="(prefers-color-scheme: dark)"
+    />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Fabien Enone" />
-    <title>Fabien Enone — card</title>
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Ianel Tombozafy" />
+    <title>Ianel Tombozafy — card</title>
     <meta
       name="description"
-      content="Digital visit card — scan the code to visit efabien.github.io."
+      content="Digital visit card — scan the code to visit portfolio-ianel.vercel.app."
     />
     <link
       rel="icon"
-      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0a'/><text x='6' y='22' font-family='JetBrains Mono, ui-monospace, monospace' font-size='14' font-weight='600' fill='%23fafafa'>FE</text></svg>"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0a'/><text x='6' y='22' font-family='JetBrains Mono, ui-monospace, monospace' font-size='14' font-weight='600' fill='%23fafafa'>IT</text></svg>"
     />
-    <link rel="apple-touch-icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='36' fill='%230a0a0a'/><text x='30' y='120' font-family='JetBrains Mono, ui-monospace, monospace' font-size='80' font-weight='600' fill='%23fafafa'>FE</text></svg>" />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='36' fill='%230a0a0a'/><text x='30' y='120' font-family='JetBrains Mono, ui-monospace, monospace' font-size='80' font-weight='600' fill='%23fafafa'>IT</text></svg>"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=5" />
+    <link rel="stylesheet" href="style.css?v=6" />
   </head>
   <body>
     <main class="stack" id="card">
+      <header class="masthead"><a class="wordmark" href="./" aria-label="Ianel home">ianel.</a><p>Web developer based in Madagascar</p></header>
       <!-- standalone QR card -->
       <section
         class="qr-card"
@@ -39,7 +54,15 @@
         id="qr-card"
         data-state="portfolio"
       >
-        <div class="qr-press" id="qr-press" role="button" tabindex="0" aria-label="Long-press to switch QR between portfolio and phone dial">
+        <h2 class="qr-heading">Take my links with you.</h2>
+        <p class="qr-description">Choose a destination, then scan to connect.</p>
+        <div
+          class="qr-press"
+          id="qr-press"
+          role="button"
+          tabindex="0"
+          aria-label="Long-press to switch QR between portfolio and phone dial"
+        >
           <div class="qr-corner tl" aria-hidden="true"></div>
           <div class="qr-corner tr" aria-hidden="true"></div>
           <div class="qr-corner bl" aria-hidden="true"></div>
@@ -48,13 +71,13 @@
             <img
               id="qr"
               src="qr.svg"
-              alt="QR code to efabien.github.io"
+              alt="QR code to portfolio-ianel.vercel.app"
               width="320"
               height="320"
               decoding="async"
             />
             <div class="qr-overlay" aria-hidden="true">
-              <span class="qr-overlay-mark" id="qr-overlay-mark">FE</span>
+              <span class="qr-overlay-mark" id="qr-overlay-mark">IT</span>
             </div>
           </div>
           <span class="qr-press-ring" aria-hidden="true"></span>
@@ -64,20 +87,78 @@
           <span class="qr-dial-pointer" aria-hidden="true"></span>
           <div class="qr-dial-rail" aria-hidden="true"></div>
           <div class="qr-dial-track" id="qr-dial-track" role="tablist">
-            <button type="button" class="qr-dial-item" data-target="portfolio" role="tab" aria-label="Portfolio site">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+            <button
+              type="button"
+              class="qr-dial-item"
+              data-target="portfolio"
+              role="tab"
+              aria-label="Portfolio site"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3a14 14 0 0 1 0 18" />
+                <path d="M12 3a14 14 0 0 0 0 18" />
+              </svg>
             </button>
-            <button type="button" class="qr-dial-item" data-target="github" role="tab" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.35-3.87-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.75.12 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            <button
+              type="button"
+              class="qr-dial-item"
+              data-target="github"
+              role="tab"
+              aria-label="GitHub"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.35-3.87-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.75.12 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                />
+              </svg>
             </button>
-            <button type="button" class="qr-dial-item" data-target="linkedin" role="tab" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.25h4v11.25H3V9.25zm7 0h3.84v1.54h.05c.54-1.02 1.84-2.1 3.8-2.1 4.06 0 4.81 2.67 4.81 6.14v5.67h-4v-5.03c0-1.2-.02-2.74-1.67-2.74s-1.93 1.3-1.93 2.65v5.12h-4V9.25z"/></svg>
+            <button
+              type="button"
+              class="qr-dial-item"
+              data-target="linkedin"
+              role="tab"
+              aria-label="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.25h4v11.25H3V9.25zm7 0h3.84v1.54h.05c.54-1.02 1.84-2.1 3.8-2.1 4.06 0 4.81 2.67 4.81 6.14v5.67h-4v-5.03c0-1.2-.02-2.74-1.67-2.74s-1.93 1.3-1.93 2.65v5.12h-4V9.25z"
+                />
+              </svg>
             </button>
-            <button type="button" class="qr-dial-item" data-target="twitter" role="tab" aria-label="X / Twitter">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.503 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
+            <button
+              type="button"
+              class="qr-dial-item"
+              data-target="twitter"
+              role="tab"
+              aria-label="X / Twitter"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.503 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                />
+              </svg>
             </button>
-            <button type="button" class="qr-dial-item" data-target="whatsapp" role="tab" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.11 4.93A10.1 10.1 0 0 0 12.04 2C6.5 2 2 6.5 2 12.04c0 1.77.46 3.5 1.35 5.02L2 22l5.07-1.33a10.05 10.05 0 0 0 4.97 1.27h.01c5.54 0 10.04-4.5 10.04-10.04 0-2.68-1.04-5.2-2.98-7.07zM12.04 20.2h-.01a8.17 8.17 0 0 1-4.16-1.14l-.3-.18-3.01.79.8-2.93-.2-.3a8.15 8.15 0 0 1-1.26-4.37c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4a8.14 8.14 0 0 1 2.4 5.8c0 4.52-3.68 8.2-8.2 8.2zm4.49-6.14c-.25-.12-1.46-.72-1.68-.8-.22-.08-.39-.12-.55.13-.16.25-.63.8-.77.96-.14.17-.28.18-.53.06-.25-.12-1.04-.38-1.97-1.21-.73-.65-1.22-1.46-1.36-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.28.37-.42.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42l-.47-.01c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.2.87 2.35.99 2.52.12.17 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.52.1.46-.07 1.46-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.1-.22-.17-.47-.29z"/></svg>
+            <button
+              type="button"
+              class="qr-dial-item"
+              data-target="whatsapp"
+              role="tab"
+              aria-label="WhatsApp"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19.11 4.93A10.1 10.1 0 0 0 12.04 2C6.5 2 2 6.5 2 12.04c0 1.77.46 3.5 1.35 5.02L2 22l5.07-1.33a10.05 10.05 0 0 0 4.97 1.27h.01c5.54 0 10.04-4.5 10.04-10.04 0-2.68-1.04-5.2-2.98-7.07zM12.04 20.2h-.01a8.17 8.17 0 0 1-4.16-1.14l-.3-.18-3.01.79.8-2.93-.2-.3a8.15 8.15 0 0 1-1.26-4.37c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4a8.14 8.14 0 0 1 2.4 5.8c0 4.52-3.68 8.2-8.2 8.2zm4.49-6.14c-.25-.12-1.46-.72-1.68-.8-.22-.08-.39-.12-.55.13-.16.25-.63.8-.77.96-.14.17-.28.18-.53.06-.25-.12-1.04-.38-1.97-1.21-.73-.65-1.22-1.46-1.36-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.28.37-.42.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42l-.47-.01c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.2.87 2.35.99 2.52.12.17 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.52.1.46-.07 1.46-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.1-.22-.17-.47-.29z"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -86,29 +167,20 @@
           <span class="dot" aria-hidden="true"></span>
           <span class="qr-hint-label">scan</span>
           <span class="qr-hint-sep" aria-hidden="true">·</span>
-          <span class="qr-hint-url" id="qr-hint-url">efabien.github.io</span>
+          <span class="qr-hint-url" id="qr-hint-url"
+            >portfolio-ianel.vercel.app</span
+          >
         </p>
       </section>
 
       <!-- profile card -->
       <section class="profile-card" aria-label="Profile">
-        <header class="banner">
-          <p class="banner-meta" aria-hidden="true">
-            <span class="bm-k">fig.</span>
-            <span class="bm-v">01</span>
-          </p>
-          <span class="banner-mark">FE</span>
-          <p class="banner-meta banner-meta-r" aria-hidden="true">
-            <span class="bm-k">v</span>
-            <span class="bm-v">1.0</span>
-          </p>
-        </header>
 
         <div class="profile-body">
           <figure class="avatar">
             <img
-              src="me.jpg"
-              alt="Portrait of Fabien Enone"
+              src="me.png"
+              alt="Portrait of Ianel Tombozafy"
               width="160"
               height="160"
               loading="eager"
@@ -117,79 +189,111 @@
           </figure>
 
           <div class="identity">
-            <h1 class="name">Fabien Enone</h1>
-            <p class="role">
-              Senior developer<span class="sep" aria-hidden="true"> · </span>freelance
-            </p>
-            <p class="company">Axiocap<span class="sep" aria-hidden="true"> · </span>Mahajanga, MG</p>
-            <p class="tagline">
-              Self-made web solution engineer — thinking in systems, from first principles.
-            </p>
+            <h1 class="name">Ianel Tombozafy</h1>
+            <p class="role">Web developer</p>
+            <p class="company">Mahajanga, MG</p>
+            <p class="tagline">Web developer — crafting usable products</p>
           </div>
 
-          <p class="section-label">
-            <span class="section-index">01</span>
-            <span class="section-sep" aria-hidden="true">/</span>
-            <span class="section-name">contact.md</span>
-          </p>
+          <h2 class="section-label">Find me online</h2>
 
           <ul class="contacts">
             <li class="contact-row">
-              <a href="https://efabien.github.io/" target="_blank" rel="noopener">
+              <a
+                href="https://portfolio-ianel.vercel.app/"
+                target="_blank"
+                rel="noopener"
+              >
                 <span class="contact-chip" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18" />
+                    <path d="M12 3a14 14 0 0 1 0 18" />
+                    <path d="M12 3a14 14 0 0 0 0 18" />
+                  </svg>
                 </span>
                 <span class="contact-text">
                   <span class="contact-label">site</span>
-                  <span class="contact-value">efabien.github.io</span>
+                  <span class="contact-value">portfolio-ianel.vercel.app</span>
                 </span>
                 <span class="contact-arrow" aria-hidden="true">↗</span>
               </a>
             </li>
             <li class="contact-row">
-              <a href="https://github.com/Efabien" target="_blank" rel="noopener">
+              <a href="https://github.com/Ianel" target="_blank" rel="noopener">
                 <span class="contact-chip" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.35-3.87-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.75.12 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.35-3.87-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.24 2.75.12 3.04.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                    />
+                  </svg>
                 </span>
                 <span class="contact-text">
                   <span class="contact-label">github</span>
-                  <span class="contact-value">@Efabien</span>
+                  <span class="contact-value">@Ianel</span>
                 </span>
                 <span class="contact-arrow" aria-hidden="true">↗</span>
               </a>
             </li>
             <li class="contact-row">
-              <a href="https://www.linkedin.com/in/enone-fabien-44980a160/" target="_blank" rel="noopener">
+              <a
+                href="https://www.linkedin.com/in/ianel-tombozafy/"
+                target="_blank"
+                rel="noopener"
+              >
                 <span class="contact-chip" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.25h4v11.25H3V9.25zm7 0h3.84v1.54h.05c.54-1.02 1.84-2.1 3.8-2.1 4.06 0 4.81 2.67 4.81 6.14v5.67h-4v-5.03c0-1.2-.02-2.74-1.67-2.74s-1.93 1.3-1.93 2.65v5.12h-4V9.25z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.25h4v11.25H3V9.25zm7 0h3.84v1.54h.05c.54-1.02 1.84-2.1 3.8-2.1 4.06 0 4.81 2.67 4.81 6.14v5.67h-4v-5.03c0-1.2-.02-2.74-1.67-2.74s-1.93 1.3-1.93 2.65v5.12h-4V9.25z"
+                    />
+                  </svg>
                 </span>
                 <span class="contact-text">
                   <span class="contact-label">linkedin</span>
-                  <span class="contact-value">Enone Fabien</span>
+                  <span class="contact-value">Ianel Tombozafy</span>
                 </span>
                 <span class="contact-arrow" aria-hidden="true">↗</span>
               </a>
             </li>
             <li class="contact-row">
-              <a href="https://x.com/fabien_enone" target="_blank" rel="noopener">
+              <a href="https://x.com/TombozafyI" target="_blank" rel="noopener">
                 <span class="contact-chip" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.503 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.503 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"
+                    />
+                  </svg>
                 </span>
                 <span class="contact-text">
                   <span class="contact-label">x / twitter</span>
-                  <span class="contact-value">@fabien_enone</span>
+                  <span class="contact-value">@TombozafyI</span>
                 </span>
                 <span class="contact-arrow" aria-hidden="true">↗</span>
               </a>
             </li>
             <li class="contact-row">
-              <a href="https://wa.me/261347601343" target="_blank" rel="noopener">
+              <a
+                href="https://wa.me/261328178421"
+                target="_blank"
+                rel="noopener"
+              >
                 <span class="contact-chip" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.11 4.93A10.1 10.1 0 0 0 12.04 2C6.5 2 2 6.5 2 12.04c0 1.77.46 3.5 1.35 5.02L2 22l5.07-1.33a10.05 10.05 0 0 0 4.97 1.27h.01c5.54 0 10.04-4.5 10.04-10.04 0-2.68-1.04-5.2-2.98-7.07zM12.04 20.2h-.01a8.17 8.17 0 0 1-4.16-1.14l-.3-.18-3.01.79.8-2.93-.2-.3a8.15 8.15 0 0 1-1.26-4.37c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4a8.14 8.14 0 0 1 2.4 5.8c0 4.52-3.68 8.2-8.2 8.2zm4.49-6.14c-.25-.12-1.46-.72-1.68-.8-.22-.08-.39-.12-.55.13-.16.25-.63.8-.77.96-.14.17-.28.18-.53.06-.25-.12-1.04-.38-1.97-1.21-.73-.65-1.22-1.46-1.36-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.28.37-.42.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42l-.47-.01c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.2.87 2.35.99 2.52.12.17 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.52.1.46-.07 1.46-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.1-.22-.17-.47-.29z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19.11 4.93A10.1 10.1 0 0 0 12.04 2C6.5 2 2 6.5 2 12.04c0 1.77.46 3.5 1.35 5.02L2 22l5.07-1.33a10.05 10.05 0 0 0 4.97 1.27h.01c5.54 0 10.04-4.5 10.04-10.04 0-2.68-1.04-5.2-2.98-7.07zM12.04 20.2h-.01a8.17 8.17 0 0 1-4.16-1.14l-.3-.18-3.01.79.8-2.93-.2-.3a8.15 8.15 0 0 1-1.26-4.37c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4a8.14 8.14 0 0 1 2.4 5.8c0 4.52-3.68 8.2-8.2 8.2zm4.49-6.14c-.25-.12-1.46-.72-1.68-.8-.22-.08-.39-.12-.55.13-.16.25-.63.8-.77.96-.14.17-.28.18-.53.06-.25-.12-1.04-.38-1.97-1.21-.73-.65-1.22-1.46-1.36-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.28.37-.42.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42l-.47-.01c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.2.87 2.35.99 2.52.12.17 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.52.1.46-.07 1.46-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.1-.22-.17-.47-.29z"
+                    />
+                  </svg>
                 </span>
                 <span class="contact-text">
                   <span class="contact-label">whatsapp</span>
-                  <span class="contact-value">+261 34 76 013 43</span>
+                  <span class="contact-value">+261 32 81 784 21</span>
                 </span>
                 <span class="contact-arrow" aria-hidden="true">↗</span>
               </a>
@@ -198,8 +302,19 @@
 
           <div class="cta-float">
             <button class="share-btn" id="share" type="button">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-              <span id="share-label">Share card</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M22 2 11 13" />
+                <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+              </svg>
+              <span id="share-label" aria-live="polite">Share card</span>
             </button>
           </div>
 
@@ -207,15 +322,16 @@
             <span class="status-dot" aria-hidden="true"></span>
             <span class="status-text">open to contracts</span>
             <span class="status-sep" aria-hidden="true">·</span>
-            <span class="status-stack">NestJS · TS · Angular · SQL</span>
+            <span class="status-stack">NodeJS · TS · React · SQL</span>
           </p>
         </div>
       </section>
 
       <footer class="colophon">
         <p class="colophon-line">
-          <span>© <span id="year"></span> Fabien Enone.</span>
+          <span>© <span id="year"></span> Ianel.</span>
         </p>
+        <p>Made for a simple hello.</p>
       </footer>
     </main>
 

@@ -1,47 +1,47 @@
 (function () {
   "use strict";
 
-  var PORTFOLIO_URL = "https://efabien.github.io/";
-  var WHATSAPP_DISPLAY = "+261 34 76 013 43";
-  var PHONE_DISPLAY = "+261 34 76 013 43";
+  var PORTFOLIO_URL = "https://portfolio-ianel.vercel.app";
+  var WHATSAPP_DISPLAY = "+261 32 81 784 21";
+  var PHONE_DISPLAY = "+261 32 81 784 21";
 
   var STATES = {
     portfolio: {
       src: "qr.svg",
-      alt: "QR code to efabien.github.io",
-      hint: "efabien.github.io",
-      mark: "FE"
+      alt: "QR code to portfolio-ianel.vercel.app",
+      hint: "portfolio-ianel.vercel.app",
+      mark: "IT",
     },
     github: {
       src: "qr-github.svg",
-      alt: "QR code to github.com/Efabien",
-      hint: "github.com/Efabien",
-      mark: "GH"
+      alt: "QR code to github.com/Ianel",
+      hint: "github.com/Ianel",
+      mark: "GH",
     },
     linkedin: {
       src: "qr-linkedin.svg",
-      alt: "QR code to linkedin.com/in/enone-fabien",
-      hint: "linkedin.com/in/enone-fabien",
-      mark: "in"
+      alt: "QR code to linkedin.com/in/ianel-tombozafy",
+      hint: "linkedin.com/in/ianel-tombozafy",
+      mark: "in",
     },
     twitter: {
       src: "qr-twitter.svg",
-      alt: "QR code to x.com/fabien_enone",
-      hint: "x.com/fabien_enone",
-      mark: "X"
+      alt: "QR code to x.com/TombozafyI",
+      hint: "x.com/TombozafyI",
+      mark: "X",
     },
     whatsapp: {
       src: "qr-whatsapp.svg",
       alt: "QR code — WhatsApp " + WHATSAPP_DISPLAY,
       hint: "wa.me · " + WHATSAPP_DISPLAY,
-      mark: "WA"
+      mark: "WA",
     },
     phone: {
       src: "qr-phone.svg",
       alt: "QR code — call " + PHONE_DISPLAY,
       hint: PHONE_DISPLAY,
-      mark: "TEL"
-    }
+      mark: "TEL",
+    },
   };
 
   var card = document.getElementById("qr-card");
@@ -135,9 +135,9 @@
   if (shareBtn) {
     shareBtn.addEventListener("click", async function () {
       var shareData = {
-        title: "Fabien Enone",
-        text: "Fabien Enone — web solution engineer",
-        url: PORTFOLIO_URL
+        title: "Ianel Tombozafy",
+        text: "Ianel Tombozafy — web developer",
+        url: PORTFOLIO_URL,
       };
       try {
         if (navigator.share) {
@@ -273,7 +273,7 @@
           }
         }, 110);
       },
-      { passive: true }
+      { passive: true },
     );
 
     window.addEventListener("resize", function () {
