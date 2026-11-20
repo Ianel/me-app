@@ -1,0 +1,11 @@
+{
+  "appId": "com.ianeltombozafy.card",
+  "appName": "Ianel Card",
+  "webDir": "www",
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "native",
+      "initialViewportFitValueHint": "contain"
+    }
+  }
+}

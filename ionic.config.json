@@ -1,0 +1,5 @@
+{
+  "name": "Ianel Card",
+  "type": "custom",
+  "integrations": { "capacitor": {} }
+}
